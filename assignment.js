@@ -19,13 +19,14 @@ function brickCalculator(floor) {
   if (floor > 0 && floor <= 10) {
     numberOfBrick = 15 * 1000 * floor;
   } else if (floor > 10 && floor <= 20) {
-    numberOfBrick = 12 * 1000 * floor;
+    numberOfBrick = 12 * 1000 * (floor - 10) + 15 * 1000 * 10;
   } else {
-    numberOfBrick = 10 * 1000 * floor;
+    numberOfBrick = 10 * 1000 * (floor - 20) + 12 * 1000 * 10 + 15 * 1000 * 10;
   }
   return numberOfBrick;
 }
 
+console.log(brickCalculator(21));
 // ==== assignment 01: tinyFriend ====
 
 function tinyFriend(array) {
