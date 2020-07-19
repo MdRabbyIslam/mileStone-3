@@ -31,6 +31,10 @@ function brickCalculator(floor) {
 function tinyFriend(array) {
   var tinyFriendName = array[0];
 
+  if (array.length == 0) {
+    console.log("you give an empty array");
+  }
+
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
 
